@@ -1,3 +1,6 @@
+exec { "apt-update":
+        command     => "/usr/bin/apt-get update"
+} ->
 package { [
         "build-essential",
         "gfortran",
@@ -9,7 +12,7 @@ package { [
         "python-nose",
         "python-yaml",
         "python-imaging",
-        #"python-matplotlib",
+        "python-matplotlib",
         "libopenblas-dev",
         "git",
     ]:
