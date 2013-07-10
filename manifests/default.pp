@@ -18,7 +18,8 @@ package { [
     ]:
     ensure => latest,
 } ->
-package { "Theano":
+package { "git+git://github.com/Theano/Theano.git":
+  install_options => "--no-deps",
   ensure => installed,
   provider => 'pip',
 } ->
