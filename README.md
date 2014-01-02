@@ -19,4 +19,7 @@ https://www.virtualbox.org/wiki/Downloads
 git clone etc
 
 ###Start the VM
+    vagrant box add base http://files.vagrantup.com/lucid32.box
+    vagrant init
 	vagrant up
+    vagrant ssh
