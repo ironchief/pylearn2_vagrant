@@ -29,7 +29,7 @@ vcsrepo { "/home/vagrant/pylearn2":
   source   => 'https://github.com/lisa-lab/pylearn2.git',
 } ->
 exec { 'install pylearn2':
-  command   => '/usr/bin/python setup.py install',
+  command   => '/usr/bin/python setup.py develop',
   cwd      => '/home/vagrant/pylearn2',
 } ->
 file { "/home/vagrant/data":
