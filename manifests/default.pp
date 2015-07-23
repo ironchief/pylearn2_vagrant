@@ -18,10 +18,8 @@ package { [
     ]:
     ensure => latest,
 } ->
-package { "git+git://github.com/Theano/Theano.git":
-  install_options => "--no-deps",
-  ensure => installed,
-  provider => 'pip',
+exec { 'install theano':
+  command => "/usr/bin/pip install -q --no-deps git+git://github.com/Theano/Theano.git"
 } ->
 vcsrepo { "/home/vagrant/pylearn2":
   ensure   => present,
